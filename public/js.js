@@ -10,6 +10,7 @@ let currentIndex = 0;
 const pageSize = 6;
 const initialLoad = 9;
 let selectedTeam = null;
+const APIurl = "https://api-404019135129.us-central1.run.app"
 
 // Placeholder data for leagues
 const leaguesBySport = {
@@ -78,7 +79,7 @@ function pause(){
 function fetchData() {
     showLoading();
     pause();
-    fetch(`http://localhost:3000/api/videos/${selectedLeague}`)
+    fetch(`${APIurl}/api/videos/${selectedLeague}`)
         .then(response => response.json())
         .then(data => {
             currentIndex = 0;
