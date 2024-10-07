@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 // Allow CORS from all origins (for development purposes)
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); // Update this in production, e.g. res.header('Access-Control-Allow-Origin', 'https://your-frontend-domain.com');
+  res.header('Access-Control-Allow-Origin', 'https://sportshighlights-5c42b.web.app/'); // Update this in production, e.g. res.header('Access-Control-Allow-Origin', 'https://your-frontend-domain.com');
   //TODO: UPDATE res.header
   next();
 });
